@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("assets\\images\\diabetes-diet_adobe.jpg");
+}
+.content {
+  padding: 20px;
+  margin: 0 50px 0 50px;
+  background-color: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-size: contain;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #191624;
+  /* background-image: url("{{url_for('static', filename='banner.jpg')}}");
+    background-size: cover;*/
+  padding: 20px 10px;
+}
+
+.header a:hover {
+  font-weight: bolder;
+  color: white;
+  text-decoration: underline solid 3px;
+}
+
+.header a.active {
+  font-weight: bolder;
+  color: white;
+  text-shadow: aqua;
+  text-decoration-thickness: 10%;
+  text-decoration: underline solid 5px;
+}
+.header a {
+  padding: 5px;
+  text-decoration: none;
+
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
