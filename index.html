@@ -8,24 +8,79 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
         <!-- Our own CSS files -->
         <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
 
-        <title>Real Estate Analysis</title>
+        <title>Diabetes Analysis</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #E1676D;" ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Home Page</a>
+            <a class="navbar-brand" href="/">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Visualizations</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">Glucose</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Age</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
         </nav>
 
-        <div>Test Page</div>
+        <div class="bg-image"></div>
+        
+        <div class="container">
+            <form>
+                <h1>Diabetes Predictor</h1>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" style='text-align:center'>Age</label>
+                    <input type="number" class="form-control" id="FormControlInput1" placeholder="0">
+                    <label for="exampleFormControlInput1">BMI</label>
+                    <input type="number" class="form-control" id="FormControlInput2" placeholder="0">
+                    <label for="exampleFormControlInput1">Glucose</label>
+                    <input type="number" class="form-control" id="FormControlInput3" placeholder="0">
+                    <label for="exampleFormControlInput1">Insulin</label>
+                    <input type="number" class="form-control" id="FormControlInput4" placeholder="0">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+        </div>
+
+        <footer class="text-center text-white p-2 pb-0">
+            <!-- Github -->
+            <h6>Made By:</h6>
+            <a class='m-2 btn btn-outline-light' href="https://github.com/MondragB" role="button">
+            <i class="fab fa-github"></i> Bryant M.</a>
+            <!-- Github -->
+            <a class='m-2 btn btn-outline-light' href="https://github.com/Wdepalma" role="button">
+            <i class="fab fa-github"></i> Walter D.</a>
+            <!-- Github -->
+            <a class='m-2 btn btn-outline-light' href="https://github.com/applepassion4" role="button">
+            <i class="fab fa-github"></i> Rosali G.</a>
+            <!-- Github -->
+            <a class='m-2 btn btn-outline-light' href="https://github.com/sammyschapps87" role="button">
+            <i class="fab fa-github"></i> Sam S.</a>
+            <!-- Github -->
+            <a class='m-2 btn btn-outline-light' href="https://github.com/vasavdave" role="button">
+            <i class="fab fa-github"></i> Vasav D.</a>
+            <!-- Github -->
+            <a class='m-2 btn btn-outline-light' href="https://github.com/ssrivastav0494" role="button">
+            <i class="fab fa-github"></i> Shreyas S.</a>
+        </footer>
 
         <!-- Optional JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
