@@ -1,10 +1,21 @@
-# Team-Project-04
+# Diabetes Analysis in US population  - diabetic detectors
+
+## Table of Contents
+* [Project Summary](#project-summary)
+* [Research Questions](#research-questions)
+* [Data Sources](#data-sources)
+* [Technologies](#technologies)
+* [Libraries & Dependencies](#libraries-dependencies)
+* [Data Cleaning](#data-cleaning)
+* [Data Visualization](#data-visualization)
+* [Setup](#setup)
+* [Website Pages](#website-pages)
+* [Reports](#reports)
+* [Team](#team)
 
 
 
-
-
-## Creators
+## Meet our team
 
 - [Bryant Mondragon](https://github.com/MondragB)
 - [Walter Depalma](https://github.com/Wdepalma)
