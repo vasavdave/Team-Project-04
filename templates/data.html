@@ -43,23 +43,10 @@
         <div class="bg-image"></div>
         
         <div class="container">
-            <form action="/data" method = "POST">
-                <h1>Diabetes Predictor</h1>
-                <div class="form-group">
-                    <label for="FormControlInput1">Age</label>
-                    <input type="number" class="form-control" id="FormControlInput1" placeholder="0" name = "age">
-
-                    <label for="FormControlInput2">BMI</label>
-                    <input type="number" class="form-control" id="FormControlInput2" placeholder="0" name = "bmi">
-
-                    <label for="FormControlInput3">Glucose</label>
-                    <input type="number" class="form-control" id="FormControlInput3" placeholder="0" name = "glucose">
-
-                    <label for="FormControlInput4">Insulin</label>
-                    <input type="number" class="form-control" id="FormControlInput4" placeholder="0" name = "insulin">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>  
+            {% for key,value in form_data.items() %}
+                <h2> {{key}}</h2>
+                <p> {{value}}</p>
+            {% endfor %}
         </div>
 
         <footer class="text-center text-white p-2 pb-0">
