@@ -11,7 +11,7 @@ html {
 
 .bg-image {
   /* The image used */
-  background-image: url("../../assets/images/insulin.jpg");
+  background-image: url("../../static/images/insulin.jpg");
 
   /* Add the blur effect */
   -webkit-filter: blur(5px);
