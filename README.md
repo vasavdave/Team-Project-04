@@ -26,11 +26,28 @@ Over time, having too much glucose in your blood can cause health problems. Alth
 Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.” These terms suggest that someone doesn’t really have diabetes or has a less serious case, but every case of diabetes is serious.
 
 * In this project, the objective is to predict whether the person has Diabetes or not based on various features such as:
+    - Pregnancies
+    - Insulin Level
+    - Age
+    - BMI
 
--Pregnancies
--Insulin Level
--Age
--BMI
+## Data Sources
+
+This dataset is originally from the [National Institute of Diabetes and Digestive and Kidney Diseases](https://repository.niddk.nih.gov/home/). The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database.
+
+## Data Cleaninng
+
+The datasets consist of several medical predictor (independent) variables and one target (dependent) variable, Outcome. Independent variables include the number of pregnancies the patient has had, their BMI, insulin level, age, and so on.
+
+   - Pregnacies: Number of times pregnant
+   - Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+   - Blood Pressure: Diastolic blood pressure (mm Hg)
+   - Skin Thickness: Triceps skin fold thickness (mm)
+   - Insulin: 2-Hour serum insulin (mu U/ml)
+   - BMI: Body mass index (weight in kg/(height in m)^2)
+   - Diabetes Pedigree: Diabetes pedigree function
+   - Age: Age in years
+   - Outcome: Class variable (0 or 1) 
 
 
 ## Meet our team
