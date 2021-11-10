@@ -13,13 +13,13 @@ from sklearn.preprocessing import StandardScaler
 from joblib import dump, load
 from tensorflow.keras.models import load_model
 
-scaler = load('scaler.joblib')
-rf_model = joblib.load('randomForest_model.sav')
-log_reg = joblib.load('logisticReg_model.sav')
-dt_model = joblib.load('decision_tree_model.sav')
-svc_model = joblib.load('svc_model.sav')
-xgb_model = joblib.load('xgb_model.sav')
-nn_model = load_model("diabetes_neuralnet.h5")
+scaler = load('models/scaler.joblib')
+rf_model = joblib.load('models/randomForest_model.sav')
+log_reg = joblib.load('models/logisticReg_model.sav')
+dt_model = joblib.load('models/decision_tree_model.sav')
+svc_model = joblib.load('models/svc_model.sav')
+xgb_model = joblib.load('models/xgb_model.sav')
+nn_model = load_model("models/diabetes_neuralnet.h5")
 
 # Flask constructor
 app = Flask(__name__)
@@ -32,15 +32,15 @@ def home():
 
 @app.route('/data', methods=["GET", "POST"])
 def data():
-    form_data = request.form
-    age = float(form_data['age'])
-    bmi = float(form_data['bmi'])
-    glu = float(form_data['glucose'])
-    ins = float(form_data['insulin'])
-    bp = float(form_data['blood pressure'])
-    skth = float(form_data['skin thickness'])
-    dpf = float(form_data['diabetes pedigree function'])/1000
-    preg = float(form_data['pregnancies'])
+    response = request.form
+    age = float(response['age'])
+    bmi = float(response['bmi'])
+    glu = float(response['glucose'])
+    ins = float(response['insulin'])
+    bp = float(response['blood pressure'])
+    skth = float(response['skin thickness'])
+    dpf = float(response['diabetes pedigree function'])/1000
+    preg = float(response['pregnancies'])
 
     X = np.array([preg, glu, bp, skth, ins, bmi, dpf, age])
     reX = X.reshape(1, -1)
@@ -53,9 +53,26 @@ def data():
     yPre_xgb = log_reg.predict(X_scaled)
     yPre_nn = nn_model.predict(X_scaled)
 
-    temp = [yPre, yPre_lg, yPre_dt, yPre_svc, yPre_xgb, yPre_nn]
+    response_data = {
+        'Random Forest:': yPre,
+        'Logistic Regression:': yPre_lg,
+        'Decision Tree:': yPre_dt,
+        'Support Vector Model:': yPre_svc,
+        'Xtreme Gradient Boosting:': yPre_xgb,
+        'Neural Network': yPre_nn
+    }
 
-    return render_template("data.html", form_data=temp)
+    return render_template("data.html", response=response_data)
+
+
+@app.route('/glucose')
+def glucose():
+    return render_template("glucose.html")
+
+
+@app.route('/age')
+def age():
+    return render_template("age.html")
 
 
 if __name__ == '__main__':

@@ -17,7 +17,7 @@
         <title>Diabetes Analysis</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #E1676D;" ">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #E1676D;" ">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,10 +28,10 @@
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Visualizations</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="#">Glucose</a>
+                                <a class="dropdown-item" href="glucose">Glucose</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Age</a>
+                                <a class="dropdown-item" href="age">Age</a>
                             </li>
                         </ul>
                     </li>
@@ -43,8 +43,8 @@
         <div class="bg-image"></div>
         
         <div class="container">
-            {% for value in form_data %}
-                <!-- #<h2> {{key}}</h2> -->
+            {% for key,value in response.items() %}
+                <h2> {{key}}</h2>
                 <p> {{value}}</p>
             {% endfor %}
         </div>
