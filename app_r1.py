@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 from sklearn.preprocessing import StandardScaler
 from joblib import dump, load
-scaler = load('scaler.joblib')
+scaler = load('scaler.joblib') 
 rf_model = joblib.load('randomForest_model.sav')
 log_reg = joblib.load('logisticReg_model.sav')
 dt_model = joblib.load('decision_tree_model.sav')
@@ -17,8 +17,8 @@ svc_model = joblib.load('svc_model.sav')
 xgb_model = joblib.load('xgb_model.sav')
 
 
-# from tensorflow.keras.models import load_model
-# nn_model = load_model("diabetes_neuralnet.h5")
+from tensorflow.keras.models import load_model
+nn_model = load_model("diabetes_neuralnet.h5")
 
 # Flask constructor
 app = Flask(__name__)
@@ -40,10 +40,11 @@ def data():
     skth = float(form_data['skin thickness'])
     dpf = float(form_data['diabetes pedigree function'])/1000
     preg = float(form_data['pregnancies'])
-
-    X = np.array([preg, glu, bp, skth, ins, bmi, dpf, age])
-    reX = X.reshape(1, -1)
+    
+    X = np.array([preg,glu,bp,skth,ins,bmi,dpf,age])
+    reX = X.reshape(1,-1)
     X_scaled = scaler.transform(reX)
+    
     yPre = rf_model.predict(X_scaled)
     print('Random Forest Prediction: ', yPre)
     yPre_lg = log_reg.predict(X_scaled)
@@ -60,11 +61,11 @@ def data():
     # print('Neural Network Prediction: ', yPre_nn)
     temp = [yPre, yPre_lg]
 
-#   form_data = [('age',age),('bmi',bmi),('glucoes',glu),('insulin',ins),('blood pressure',bp),('skin thickness',skth),('diabetes predigree function',dpf),('pregnancies',preg)]
+ #   form_data = [('age',age),('bmi',bmi),('glucoes',glu),('insulin',ins),('blood pressure',bp),('skin thickness',skth),('diabetes predigree function',dpf),('pregnancies',preg)]
 
-    print(type(form_data))
+    #print(type(form_data))
 
-    return render_template("data.html")
+    return render_template("data.html", form_data=temp)
 
 
 if __name__ == '__main__':
