@@ -1,3 +1,4 @@
+from tensorflow.keras.models import load_model
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
@@ -9,11 +10,10 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 from sklearn.preprocessing import StandardScaler
 from joblib import dump, load
-scaler = load('scaler.joblib') 
+scaler = load('scaler.joblib')
 rf_model = joblib.load('randomForest_model.sav')
 log_reg = joblib.load('logisticReg_model.sav')
 
-from tensorflow.keras.models import load_model
 nn_model = load_model("diabetes_neuralnet.h5")
 
 # Flask constructor
@@ -36,27 +36,25 @@ def data():
     skth = float(form_data['skin thickness'])
     dpf = float(form_data['diabetes pedigree function'])/1000
     preg = float(form_data['pregnancies'])
-    
-    X = np.array([preg,glu,bp,skth,ins,bmi,dpf,age])
-    reX = X.reshape(1,-1)
+
+    X = np.array([preg, glu, bp, skth, ins, bmi, dpf, age])
+    reX = X.reshape(1, -1)
     X_scaled = scaler.transform(reX)
     yPre = rf_model.predict(X_scaled)
 
     print('Random Forest Prediction: ', yPre)
 
     yPre_lg = log_reg.predict(X_scaled)
-    print('Logistical Regression Prediction: ',yPre_lg)
+    print('Logistical Regression Prediction: ', yPre_lg)
 
     yPre_nn = nn_model.predict(X_scaled)
     print('Neural Network Prediction: ', yPre_nn)
 
     temp = [yPre, yPre_lg, yPre_nn]
 
-
-
  #   form_data = [('age',age),('bmi',bmi),('glucoes',glu),('insulin',ins),('blood pressure',bp),('skin thickness',skth),('diabetes predigree function',dpf),('pregnancies',preg)]
 
-    #print(type(form_data))
+    # print(type(form_data))
 
     return render_template("data.html", form_data=temp)
 
