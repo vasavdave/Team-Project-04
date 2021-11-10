@@ -17,8 +17,8 @@ svc_model = joblib.load('svc_model.sav')
 xgb_model = joblib.load('xgb_model.sav')
 
 
-from tensorflow.keras.models import load_model
-nn_model = load_model("diabetes_neuralnet.h5")
+# from tensorflow.keras.models import load_model
+# nn_model = load_model("diabetes_neuralnet.h5")
 
 # Flask constructor
 app = Flask(__name__)
