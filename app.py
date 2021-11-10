@@ -12,8 +12,6 @@ def home():
 @app.route('/data', methods=["GET", "POST"])
 def data():
     form_data = request.form
-    print(form_data['age'])
-    
     return render_template("data.html", form_data=form_data)
 
 

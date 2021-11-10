@@ -9,12 +9,12 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 from sklearn.preprocessing import StandardScaler
 from joblib import dump, load
-scaler = load('scaler.joblib') 
+scaler = load('scaler.joblib')
 rf_model = joblib.load('randomForest_model.sav')
 log_reg = joblib.load('logisticReg_model.sav')
 
-from tensorflow.keras.models import load_model
-nn_model = load_model("diabetes_neuralnet.h5")
+# from tensorflow.keras.models import load_model
+# nn_model = load_model("diabetes_neuralnet.h5")
 
 # Flask constructor
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def home():
 
 @app.route('/data', methods=["GET", "POST"])
 def data():
-    form_data = request.form
+    # form_data = request.form
     age = float(form_data['age'])
     bmi = float(form_data['bmi'])
     glu = float(form_data['glucose'])
@@ -36,26 +36,23 @@ def data():
     skth = float(form_data['skin thickness'])
     dpf = float(form_data['diabetes pedigree function'])/1000
     preg = float(form_data['pregnancies'])
-    
-    X = np.array([preg,glu,bp,skth,ins,bmi,dpf,age])
-    reX = X.reshape(1,-1)
+
+    X = np.array([preg, glu, bp, skth, ins, bmi, dpf, age])
+    reX = X.reshape(1, -1)
     X_scaled = scaler.transform(reX)
     yPre = rf_model.predict(X_scaled)
     print('Random Forest Prediction: ', yPre)
     yPre_lg = log_reg.predict(X_scaled)
-    print('Logistical Regression Prediction: ',yPre_lg)
-    yPre_nn = nn_model.predict(X_scaled)
-    print('Neural Network Prediction: ', yPre_nn)
-    
+    print('Logistical Regression Prediction: ', yPre_lg)
+    # yPre_nn = nn_model.predict(X_scaled)
+    # print('Neural Network Prediction: ', yPre_nn)
+    temp = [yPre, yPre_lg]
 
-
-
-
- #   form_data = [('age',age),('bmi',bmi),('glucoes',glu),('insulin',ins),('blood pressure',bp),('skin thickness',skth),('diabetes predigree function',dpf),('pregnancies',preg)]
+#   form_data = [('age',age),('bmi',bmi),('glucoes',glu),('insulin',ins),('blood pressure',bp),('skin thickness',skth),('diabetes predigree function',dpf),('pregnancies',preg)]
 
     print(type(form_data))
 
-    return render_template("data.html", form_data=form_data)
+    return render_template("data.html")
 
 
 if __name__ == '__main__':
