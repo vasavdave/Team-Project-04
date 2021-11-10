@@ -45,7 +45,7 @@ The datasets consist of several medical predictor (independent) variables and on
    - Skin Thickness: Triceps skin fold thickness (mm)
    - Insulin: 2-Hour serum insulin (mu U/ml)
    - BMI: Body mass index (weight in kg/(height in m)^2)
-   - Diabetes Pedigree: Diabetes pedigree function
+   - Diabetes Pedigree: A function which scores likelihood of diabetes based on family history
    - Age: Age in years
    - Outcome: Class variable (0 or 1) 
 
