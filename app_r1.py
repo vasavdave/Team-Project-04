@@ -12,6 +12,10 @@ from joblib import dump, load
 scaler = load('scaler.joblib')
 rf_model = joblib.load('randomForest_model.sav')
 log_reg = joblib.load('logisticReg_model.sav')
+dt_model = joblib.load('decision_tree_model.sav')
+svc_model = joblib.load('svc_model.sav')
+xgb_model = joblib.load('xgb_model.sav')
+
 
 # from tensorflow.keras.models import load_model
 # nn_model = load_model("diabetes_neuralnet.h5")
@@ -27,7 +31,7 @@ def home():
 
 @app.route('/data', methods=["GET", "POST"])
 def data():
-    # form_data = request.form
+    form_data = request.form
     age = float(form_data['age'])
     bmi = float(form_data['bmi'])
     glu = float(form_data['glucose'])
@@ -44,6 +48,14 @@ def data():
     print('Random Forest Prediction: ', yPre)
     yPre_lg = log_reg.predict(X_scaled)
     print('Logistical Regression Prediction: ', yPre_lg)
+    yPre_dt = log_reg.predict(X_scaled)
+    print(f'Decision Tree Prediction: {yPre_dt}')
+    yPre_svc = log_reg.predict(X_scaled)
+    print(f'Support Vector Classifier Prediction: {yPre_svc}')
+    yPre_xgb = log_reg.predict(X_scaled)
+    print(f'The XG Boost Prediction: {yPre_xgb}')
+
+
     # yPre_nn = nn_model.predict(X_scaled)
     # print('Neural Network Prediction: ', yPre_nn)
     temp = [yPre, yPre_lg]
