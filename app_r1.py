@@ -13,8 +13,13 @@ from joblib import dump, load
 scaler = load('scaler.joblib')
 rf_model = joblib.load('randomForest_model.sav')
 log_reg = joblib.load('logisticReg_model.sav')
+dt_model = joblib.load('decision_tree_model.sav')
+svc_model = joblib.load('svc_model.sav')
+xgb_model = joblib.load('xgb_model.sav')
 
-nn_model = load_model("diabetes_neuralnet.h5")
+
+# from tensorflow.keras.models import load_model
+# nn_model = load_model("diabetes_neuralnet.h5")
 
 # Flask constructor
 app = Flask(__name__)
@@ -40,17 +45,21 @@ def data():
     X = np.array([preg, glu, bp, skth, ins, bmi, dpf, age])
     reX = X.reshape(1, -1)
     X_scaled = scaler.transform(reX)
+
     yPre = rf_model.predict(X_scaled)
-
     print('Random Forest Prediction: ', yPre)
-
     yPre_lg = log_reg.predict(X_scaled)
     print('Logistical Regression Prediction: ', yPre_lg)
+    yPre_dt = log_reg.predict(X_scaled)
+    print(f'Decision Tree Prediction: {yPre_dt}')
+    yPre_svc = log_reg.predict(X_scaled)
+    print(f'Support Vector Classifier Prediction: {yPre_svc}')
+    yPre_xgb = log_reg.predict(X_scaled)
+    print(f'The XG Boost Prediction: {yPre_xgb}')
 
-    yPre_nn = nn_model.predict(X_scaled)
-    print('Neural Network Prediction: ', yPre_nn)
-
-    temp = [yPre, yPre_lg, yPre_nn]
+    # yPre_nn = nn_model.predict(X_scaled)
+    # print('Neural Network Prediction: ', yPre_nn)
+    temp = [yPre, yPre_lg]
 
  #   form_data = [('age',age),('bmi',bmi),('glucoes',glu),('insulin',ins),('blood pressure',bp),('skin thickness',skth),('diabetes predigree function',dpf),('pregnancies',preg)]
 
