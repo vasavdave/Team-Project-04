@@ -43,8 +43,8 @@
         <div class="bg-image"></div>
         
         <div class="container">
-            {% for key,value in form_data.items() %}
-                <h2> {{key}}</h2>
+            {% for value in form_data %}
+                <!-- #<h2> {{key}}</h2> -->
                 <p> {{value}}</p>
             {% endfor %}
         </div>
