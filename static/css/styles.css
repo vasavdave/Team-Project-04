@@ -97,6 +97,12 @@ input:focus {
   padding: 1rem;
 }
 
+.results-container {
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 50%;
+}
+
 footer {
   background-color: #9198e5;
   position: absolute;
@@ -121,4 +127,23 @@ nav {
   form {
     width: 75%;
   }
+}
+
+table {
+  counter-reset: rowNumber;
+}
+
+table tr {
+  counter-increment: rowNumber;
+}
+
+table tr td:first-child {
+  content: counter(rowNumber);
+  min-width: 1em;
+  margin-right: 0.5em;
+}
+
+th,
+td {
+  text-align: center;
 }

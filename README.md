@@ -10,8 +10,8 @@
   - [Technologies](#technologies)
   - [Data sources](#data-sources)
   - [Data Cleaninng](#data-cleaninng)
-  - [Models](#models)
   - [Visualization](#visualization)
+- [Models](#models)
   - [Decision Tree](#decision-tree)
   - [Random Forest](#random-forest)
   - [Extreme Gradient Boosting](#extreme-gradient-boosting)
@@ -58,8 +58,6 @@ The datasets consist of several medical predictor variables. Independent variabl
 - Age: Age in years
 - Outcome: Class variable (0 or 1)
 
-## Models
-
 ## Visualization
 
 ![Dashboard](./static/images/dashboard.png)
@@ -71,6 +69,7 @@ The datasets consist of several medical predictor variables. Independent variabl
 Aging is by far the strongest known risk factor of diabetes mellitus in the USA. In this graph, we can observe that the risk of diabetes disease can either be in young population or older but predominantly among those people age 45 years or older. They are more at risk for developing type 2 diabetes because as you get older, insulin secretion decreases, and changes in your body composition make it more insulin resistant. Both of these can lead to high blood sugar levels.
 
 Glucose tolerance progressively declines with age, and there is a high prevalence of type 2 diabetes and postchallenge hyperglycemia in the older population. It is clear that in this graph there is a strong case of people with diabetes. Because of insulin helps control blood glucose levels everything is related (glucose, insulin, and age)
+# Models
 
 ## Decision Tree
 
