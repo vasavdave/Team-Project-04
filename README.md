@@ -1,5 +1,6 @@
-# Diabetes Analysis in US population  - sugar detectors
-![Blue-background](https://user-images.githubusercontent.com/53684246/140440635-02fed568-c048-4cd4-b263-bfd0cc758f59.jpg)
+# Diabetes Prediction- Machine Learning 
+
+<img width="1786" alt="Screen Shot 2021-11-10 at 10 24 17 PM" src="https://user-images.githubusercontent.com/53684246/141231759-2a5380dc-9d58-4e42-9286-c572fe00cf25.png">
 
 ## Table of Contents
 * [Project Summary](#project-summary)
