@@ -6,8 +6,8 @@
 
 * [Project Summary](#project-summary)
 * [Technologies](#technologies)
-* [ETL](#extract-transform-load)
-* [Test & Train](#test-train)
+* [Data sources](#data-sources)
+* [Models](#models)
 * [Visualization](#visualization)
 * [Learnings](#learnings)
 * [Run Flask App](#run-flask-app)
@@ -38,19 +38,14 @@ Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.
 * HTML / CSS 
 * Tableau 
 
-## Extract Transform Load
+## Data sources
+- https://www.kaggle.com/vikasukani/diabetes-data-set 
+- https://www.kaggle.com/uciml/pima-indians-diabetes-database 
 
-*	Data from CSV files of Kaggle database. 
-*	Used `librosa` package to convert audio files into 128 Features including low-level feature extraction, such as chromograms, Mel spectrogram, MFCC, and various other spectral and rhythmic features
-*	Used Pandas to provide the feature data for emotions and gender as input to the models
-*	Tested `RandomForestClassifier`, `KNeighborsClassifier` , `Keras Deep Learning`, and `Linear Regression` to find the most accurate model.  
-*	Developed a record and playback functionality - the output of which could be read a model for predicting the emotions and the gender of the recorded audio
-*	Sample pre-recorded test clips were given as input to the models and emotions were predicted successfully.
-This dataset is originally from the [National Institute of Diabetes and Digestive and Kidney Diseases](https://repository.niddk.nih.gov/home/). The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database.
 
 ## Data Cleaninng
 
-The datasets consist of several medical predictor (independent) variables and one target (dependent) variable, Outcome. Independent variables include the number of pregnancies the patient has had, their BMI, insulin level, age, and so on.
+The datasets consist of several medical predictor variables. Independent variables include the number of pregnancies the patient has had, their BMI, insulin level, age, skin thickness, and so on.
 
    - Pregnacies: Number of times pregnant
    - Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
@@ -62,6 +57,11 @@ The datasets consist of several medical predictor (independent) variables and on
    - Age: Age in years
    - Outcome: Class variable (0 or 1) 
 
+## Models
+
+## Visualization
+
+<div class='tableauPlaceholder' id='viz1636604037947' style='position: relative'><noscript><a href='#'><img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;RY&#47;RYJPGR2Q4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;RYJPGR2Q4' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;RY&#47;RYJPGR2Q4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1636604037947');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 ## Meet our team
 
