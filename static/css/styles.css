@@ -7,46 +7,46 @@ html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../../static/images/insulin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.bg-image {
-  /* The image used */
-  background-image: url("../../static/images/insulin.jpg");
+.plotly-container {
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 3rem;
+  width: 75%;
+}
 
-  /* Add the blur effect */
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0px 0px 3px 3px #9198e5;
+.tableau-container {
+  margin: 0 auto;
+  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  width: 55%;
 }
 
 form {
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
   background: linear-gradient(#e66465, #9198e5);
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
   width: 25%;
   padding: 20px;
+  margin-top: 150px;
   text-align: center;
 }
 
 footer {
   background-color: #9198e5;
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+}
+
+nav {
+  padding-left: 50px;
+  padding-right: 50px;
 }

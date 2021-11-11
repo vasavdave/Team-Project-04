@@ -39,36 +39,34 @@
             </div>
         </div>
         </nav>
-
-        <div class="bg-image"></div>
         
-        <div class="container">
+        <div class="d-flex justify-content-center">
             <form action="/data" method = "POST">
                 <h1>Diabetes Predictor</h1>
                 <div class="form-group">
                     <label for="FormControlInput1">Age</label>
-                    <input type="number" class="form-control" id="FormControlInput1" placeholder="0" name = "age">
+                    <input type="number" class="form-control" id="FormControlInput1" placeholder="0" name = "age" required>
 
                     <label for="FormControlInput2">BMI</label>
-                    <input type="number" class="form-control" id="FormControlInput2" placeholder="0" name = "bmi">
+                    <input type="number" class="form-control" id="FormControlInput2" placeholder="0" name = "bmi" required>
 
                     <label for="FormControlInput3">Glucose</label>
-                    <input type="number" class="form-control" id="FormControlInput3" placeholder="0" name = "glucose">
+                    <input type="number" class="form-control" id="FormControlInput3" placeholder="0" name = "glucose" required>
 
                     <label for="FormControlInput4">Insulin</label>
-                    <input type="number" class="form-control" id="FormControlInput4" placeholder="0" name = "insulin">
+                    <input type="number" class="form-control" id="FormControlInput4" placeholder="0" name = "insulin" required>
 
                     <label for="FormControlInput5">Blood Pressure Diastolic</label>
-                    <input type="number" class="form-control" id="FormControlInput5" placeholder="0" name = "blood pressure">
+                    <input type="number" class="form-control" id="FormControlInput5" placeholder="0" name = "blood pressure" required>
 
                     <label for="FormControlInput6">Skin Thickness</label>
-                    <input type="number" class="form-control" id="FormControlInput6" placeholder="0" name = "skin thickness">
+                    <input type="number" class="form-control" id="FormControlInput6" placeholder="0" name = "skin thickness" required>
 
                     <label for="FormControlInput7">Diabetes Pedigree Function</label>
-                    <input type="number" class="form-control" id="FormControlInput7" placeholder="0" name = "diabetes pedigree function">
+                    <input type="number" class="form-control" id="FormControlInput7" placeholder="0" name = "diabetes pedigree function" required>
 
                     <label for="FormControlInput8">Pregnancies</label>
-                    <input type="number" class="form-control" id="FormControlInput8" placeholder="0" name = "pregnancies">
+                    <input type="number" class="form-control" id="FormControlInput8" placeholder="0" name = "pregnancies" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>  
@@ -76,7 +74,6 @@
 
         <footer class="text-center text-white p-2 pb-0">
             <!-- Github -->
-            <h6>Made By:</h6>
             <a class='m-2 btn btn-outline-light' href="https://github.com/MondragB" role="button">
             <i class="fab fa-github"></i> Bryant M.</a>
             <!-- Github -->
