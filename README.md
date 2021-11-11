@@ -66,16 +66,38 @@ The datasets consist of several medical predictor variables. Independent variabl
 
 <img width="1105" alt="Screen Shot 2021-11-10 at 11 30 07 PM" src="https://user-images.githubusercontent.com/53684246/141237329-b64e3282-d8ad-4e27-b4c7-68a93a988901.png">
 
+<img width="844" alt="Screen Shot 2021-11-10 at 11 26 19 PM" src="https://github.com/vasavdave/Team-Project-04/blob/main/Visualization/random_forest.png">
+
 ```text
 
 Aging is by far the strongest known risk factor of diabetes mellitus in the USA. In this graph, we can observe that the risk of diabetes disease can either be in young population or older but predominantly among those people age 45 years or older. They are more at risk for developing type 2 diabetes because as you get older, insulin secretion decreases, and changes in your body composition make it more insulin resistant. Both of these can lead to high blood sugar levels.
 ```
 
-<img width="1112" alt="Screen Shot 2021-11-10 at 11 32 01 PM" src="https://user-images.githubusercontent.com/53684246/141237527-b41d33ef-d9ad-4a63-aa96-74101f73ac5f.png">
+
 
 ```text
 Glucose tolerance progressively declines with age, and there is a high prevalence of type 2 diabetes and postchallenge hyperglycemia in the older population. It is clear that in this graph there is a strong case of people with diabetes. Because of insulin helps control blood glucose levels everything is related (glucose, insulin, and age)
 ```
+
+# Decision Tree 
+![Decision Tree](decision_tree.png)
+```text
+A Decision Tree regresses values in a tree form structure. Simply put, it starts with the first varible and finds out all possible outcomes for that varible. Using these outcomes it then moves on to the next varible and finds all possible outcomes with regards to the first varible. It creates mulitiple small constituents of the larger data set to create its predictions. Varibles are broken up into leaf nodes (a decision on a numerical value) and decision nodes (a decision on a categorical value)
+```
+
+# Random Forest 
+![Random Forest](random_forest.png)
+```text
+Random Forest is similar to Decision Tree in that they both use the concept of Decision Trees. The difference is that DT is built on an entire dataset while Random Forest will randomly select specific varibles and features and use these selections to build mulitiple decisions trees. This Visulization shows the importance of each varible included in the Random Forest regression. Glucose proves to be the most influential varible in regards to wether a person has diabetes or not. BMI, Age and DPF generally tie for second place. 
+```
+
+
+# Extreme Gradient Boosting
+![XG Boost](xgboost_features.png)
+```text
+Extream Gradient Boosting regresses values similar to a decision tree with a few differences. The main difference being it uses a more regularized model formalization to control over-fitting, which gives it better performance than ml techniques like Decision Tree. 
+```
+
 
 ## Meet our team
 
