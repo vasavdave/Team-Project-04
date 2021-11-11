@@ -65,6 +65,7 @@ The datasets consist of several medical predictor variables. Independent variabl
 
 <img width="844" alt="Screen Shot 2021-11-10 at 11 26 19 PM" src="https://user-images.githubusercontent.com/53684246/141237152-39d3dcee-c31f-40ff-92c9-fcee0e08d52e.png">
 
+<img width="1105" alt="Screen Shot 2021-11-10 at 11 30 07 PM" src="https://user-images.githubusercontent.com/53684246/141237329-b64e3282-d8ad-4e27-b4c7-68a93a988901.png">
 
 ## Meet our team
 
