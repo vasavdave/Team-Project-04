@@ -80,5 +80,17 @@ def scatter():
     return render_template("scatter.html")
 
 
+@app.errorhandler(400)
+def bad_request(e):
+    # note that we set the 400 status explicitly
+    return render_template('400.html'), 400
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
+
 if __name__ == '__main__':
     app.run()

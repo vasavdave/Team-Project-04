@@ -35,7 +35,6 @@ Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.
 - Jupyter Notebook / Pandas
 - Javascript
 - Flask App
-- D3
 - Plotly
 - HTML / CSS
 - Tableau
