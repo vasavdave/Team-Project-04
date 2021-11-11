@@ -2,7 +2,18 @@
 
 <img width="1786" alt="Screen Shot 2021-11-10 at 10 24 17 PM" src="https://user-images.githubusercontent.com/53684246/141231759-2a5380dc-9d58-4e42-9286-c572fe00cf25.png">
 
-## Table of Contents
+## Table of contents
+
+* [Project Summary](#project-summary)
+* [Technologies](#technologies)
+* [ETL](#extract-transform-load)
+* [Test & Train](#test-train)
+* [Visualization](#visualization)
+* [Learnings](#learnings)
+* [Run Flask App](#run-flask-app)
+* [Heroku](#heroku)
+* [Resources](#resources)
+* [Contact](#contact)
 * [Project Summary](#project-summary)
 * [Research Questions](#research-questions)
 * [Data Sources](#data-sources)
@@ -26,11 +37,7 @@ Over time, having too much glucose in your blood can cause health problems. Alth
 
 Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.” These terms suggest that someone doesn’t really have diabetes or has a less serious case, but every case of diabetes is serious.
 
-* In this project, the objective is to predict whether the person has Diabetes or not based on various features such as:
-    - Pregnancies
-    - Insulin Level
-    - Age
-    - BMI
+
 
 ## Data Sources
 
