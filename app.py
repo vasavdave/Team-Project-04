@@ -75,5 +75,10 @@ def age():
     return render_template("age.html")
 
 
+@app.route('/scatter')
+def scatter():
+    return render_template("scatter.html")
+
+
 if __name__ == '__main__':
     app.run()
