@@ -1,20 +1,22 @@
-# Diabetes Prediction- Machine Learning 
+# Diabetes Prediction- Machine Learning
 
 <img width="1786" alt="Screen Shot 2021-11-10 at 10 24 17 PM" src="https://user-images.githubusercontent.com/53684246/141231759-2a5380dc-9d58-4e42-9286-c572fe00cf25.png">
 
 ## Table of contents
 
-* [Project Summary](#project-summary)
-* [Technologies](#technologies)
-* [Data sources](#data-sources)
-* [Models](#models)
-* [Visualization](#visualization)
-* [Team](#team)
-
+- [Diabetes Prediction- Machine Learning](#diabetes-prediction--machine-learning)
+  - [Table of contents](#table-of-contents)
+  - [Project Summary](#project-summary)
+  - [Technologies](#technologies)
+  - [Data sources](#data-sources)
+  - [Data Cleaninng](#data-cleaninng)
+  - [Models](#models)
+  - [Visualization](#visualization)
+  - [Meet our team](#meet-our-team)
 
 ## Project Summary
 
-What is Diabetes? 
+What is Diabetes?
 
 ![Diabetes-Type-2](https://user-images.githubusercontent.com/53684246/141233846-552ec140-4a15-4073-b62e-b26c582efe81.jpg)
 
@@ -24,36 +26,35 @@ Over time, having too much glucose in your blood can cause health problems. Alth
 
 Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.” These terms suggest that someone doesn’t really have diabetes or has a less serious case, but every case of diabetes is serious.
 
-
 ## Technologies
 
-* Machine Learning
-* Jupyter Notebook / Pandas 
-* Javascript 
-* Flask App
-* D3
-* Plotly
-* HTML / CSS 
-* Tableau 
+- Machine Learning
+- Jupyter Notebook / Pandas
+- Javascript
+- Flask App
+- D3
+- Plotly
+- HTML / CSS
+- Tableau
 
 ## Data sources
-- https://www.kaggle.com/vikasukani/diabetes-data-set 
-- https://www.kaggle.com/uciml/pima-indians-diabetes-database 
 
+- <https://www.kaggle.com/vikasukani/diabetes-data-set>
+- <https://www.kaggle.com/uciml/pima-indians-diabetes-database>
 
 ## Data Cleaninng
 
 The datasets consist of several medical predictor variables. Independent variables include the number of pregnancies the patient has had, their BMI, insulin level, age, skin thickness, and so on.
 
-   - Pregnacies: Number of times pregnant
-   - Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
-   - Blood Pressure: Diastolic blood pressure (mm Hg)
-   - Skin Thickness: Triceps skin fold thickness (mm)
-   - Insulin: 2-Hour serum insulin (mu U/ml)
-   - BMI: Body mass index (weight in kg/(height in m)^2)
-   - Diabetes Pedigree: A function which scores likelihood of diabetes based on family history
-   - Age: Age in years
-   - Outcome: Class variable (0 or 1) 
+- Pregnacies: Number of times pregnant
+- Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+- Blood Pressure: Diastolic blood pressure (mm Hg)
+- Skin Thickness: Triceps skin fold thickness (mm)
+- Insulin: 2-Hour serum insulin (mu U/ml)
+- BMI: Body mass index (weight in kg/(height in m)^2)
+- Diabetes Pedigree: A function which scores likelihood of diabetes based on family history
+- Age: Age in years
+- Outcome: Class variable (0 or 1)
 
 ## Models
 
@@ -65,11 +66,16 @@ The datasets consist of several medical predictor variables. Independent variabl
 
 <img width="1105" alt="Screen Shot 2021-11-10 at 11 30 07 PM" src="https://user-images.githubusercontent.com/53684246/141237329-b64e3282-d8ad-4e27-b4c7-68a93a988901.png">
 
-``` Aging is by far the strongest known risk factor of diabetes mellitus in the USA. In this graph, we can observe that the risk of diabetes disease can either be in young population or older but predominantly among those people age 45 years or older. They are more at risk for developing type 2 diabetes because as you get older, insulin secretion decreases, and changes in your body composition make it more insulin resistant. Both of these can lead to high blood sugar levels.```
+```text
+
+Aging is by far the strongest known risk factor of diabetes mellitus in the USA. In this graph, we can observe that the risk of diabetes disease can either be in young population or older but predominantly among those people age 45 years or older. They are more at risk for developing type 2 diabetes because as you get older, insulin secretion decreases, and changes in your body composition make it more insulin resistant. Both of these can lead to high blood sugar levels.
+```
 
 <img width="1112" alt="Screen Shot 2021-11-10 at 11 32 01 PM" src="https://user-images.githubusercontent.com/53684246/141237527-b41d33ef-d9ad-4a63-aa96-74101f73ac5f.png">
 
-``` Glucose tolerance progressively declines with age, and there is a high prevalence of type 2 diabetes and postchallenge hyperglycemia in the older population. It is clear that in this graph there is a strong case of people with diabetes. Because of insulin helps control blood glucose levels everything is related (glucose, insulin, and age)``` 
+```text
+Glucose tolerance progressively declines with age, and there is a high prevalence of type 2 diabetes and postchallenge hyperglycemia in the older population. It is clear that in this graph there is a strong case of people with diabetes. Because of insulin helps control blood glucose levels everything is related (glucose, insulin, and age)
+```
 
 ## Meet our team
 
