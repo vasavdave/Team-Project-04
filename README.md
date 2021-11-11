@@ -11,19 +11,6 @@
 * [Visualization](#visualization)
 * [Learnings](#learnings)
 * [Run Flask App](#run-flask-app)
-* [Heroku](#heroku)
-* [Resources](#resources)
-* [Contact](#contact)
-* [Project Summary](#project-summary)
-* [Research Questions](#research-questions)
-* [Data Sources](#data-sources)
-* [Technologies](#technologies)
-* [Libraries & Dependencies](#libraries-dependencies)
-* [Data Cleaning](#data-cleaning)
-* [Data Visualization](#data-visualization)
-* [Setup](#setup)
-* [Website Pages](#website-pages)
-* [Reports](#reports)
 * [Team](#team)
 
 
@@ -40,9 +27,25 @@ Over time, having too much glucose in your blood can cause health problems. Alth
 Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.” These terms suggest that someone doesn’t really have diabetes or has a less serious case, but every case of diabetes is serious.
 
 
+## Technologies
 
-## Data Sources
+* Machine Learning
+* Jupyter Notebook / Pandas 
+* Javascript 
+* Flask App
+* D3
+* Plotly
+* HTML / CSS 
+* Tableau 
 
+## Extract Transform Load
+
+*	Data from CSV files of Kaggle database. 
+*	Used `librosa` package to convert audio files into 128 Features including low-level feature extraction, such as chromograms, Mel spectrogram, MFCC, and various other spectral and rhythmic features
+*	Used Pandas to provide the feature data for emotions and gender as input to the models
+*	Tested `RandomForestClassifier`, `KNeighborsClassifier` , `Keras Deep Learning`, and `Linear Regression` to find the most accurate model.  
+*	Developed a record and playback functionality - the output of which could be read a model for predicting the emotions and the gender of the recorded audio
+*	Sample pre-recorded test clips were given as input to the models and emotions were predicted successfully.
 This dataset is originally from the [National Institute of Diabetes and Digestive and Kidney Diseases](https://repository.niddk.nih.gov/home/). The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database.
 
 ## Data Cleaninng
