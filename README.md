@@ -9,8 +9,6 @@
 * [Data sources](#data-sources)
 * [Models](#models)
 * [Visualization](#visualization)
-* [Learnings](#learnings)
-* [Run Flask App](#run-flask-app)
 * [Team](#team)
 
 
@@ -71,7 +69,7 @@ The datasets consist of several medical predictor variables. Independent variabl
 
 <img width="1112" alt="Screen Shot 2021-11-10 at 11 32 01 PM" src="https://user-images.githubusercontent.com/53684246/141237527-b41d33ef-d9ad-4a63-aa96-74101f73ac5f.png">
 
-``` Glucose tolerance progressively declines with age, and there is a high prevalence of type 2 diabetes and postchallenge hyperglycemia in the older population. It is clear that in this graph there is a strong case of people with diabetes. Because of insulin helps control blood glucose levels everything is related (glucose, insulin, and age``` 
+``` Glucose tolerance progressively declines with age, and there is a high prevalence of type 2 diabetes and postchallenge hyperglycemia in the older population. It is clear that in this graph there is a strong case of people with diabetes. Because of insulin helps control blood glucose levels everything is related (glucose, insulin, and age)``` 
 
 ## Meet our team
 
