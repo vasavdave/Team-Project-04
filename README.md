@@ -44,6 +44,8 @@ Sometimes people call diabetes “a touch of sugar” or “borderline diabetes.
 - <https://www.kaggle.com/vikasukani/diabetes-data-set>
 - <https://www.kaggle.com/uciml/pima-indians-diabetes-database>
 
+This dataset is originally from the [National Institute of Diabetes and Digestive and Kidney Diseases](https://repository.niddk.nih.gov/home/). The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database.
+
 ## Data Cleaninng
 
 The datasets consist of several medical predictor variables. Independent variables include the number of pregnancies the patient has had, their BMI, insulin level, age, skin thickness, and so on.
